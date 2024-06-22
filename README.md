@@ -8,6 +8,12 @@ To download libraries use the command below:
 pip install -r requirement.txt
 
 
+First run this command to download llama3:
+
+
+ollama.pull("llama3")
+
+
 To run the app type: 
 
 
