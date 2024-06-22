@@ -1,6 +1,7 @@
 import json
 import os
 import streamlit as st
+
 def save_chat_session(session_name, chat_log):
     chat_session = {
         "name": session_name,
@@ -11,7 +12,9 @@ def save_chat_session(session_name, chat_log):
     # Save chat session to a JSON file
     with open(os.path.join("chat_session", f"{session_name}.json"), "w") as f:
         json.dump(chat_session, f)
-
+        
+    # Return updated list of saved sessions
+    return list_saved_session()
 
 def load_chat_session(session_name):
     # Load chat session from a JSON file
@@ -26,7 +29,7 @@ def load_chat_session(session_name):
         st.sidebar.error(f"No chat session found with the name '{session_name}'")
         return []
 
-def display_saved_sessions():
+def list_saved_session():
     # Ensure the directory exists
     os.makedirs("chat_session", exist_ok=True)
     sessions = [f.replace('.json', '') for f in os.listdir("chat_session") if f.endswith('.json')]
