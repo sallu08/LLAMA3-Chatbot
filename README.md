@@ -1,6 +1,6 @@
 # LLAMA3-Chatbot
 Build a free LLAMA3 Chatbot on your local machine. 
-Make sure you have Python and Ollama installed.   (Main branch has very basic functionality. Updates will be uploaded on seperate branches) 
+Make sure you have Python and Ollama installed.       (Main branch has very basic functionality. Updates will be uploaded on seperate branches) 
 
 To download libraries use the command below:
 
